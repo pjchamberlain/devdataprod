@@ -1,0 +1,41 @@
+Coursera Data Science Specialisation: Developing Data Products
+========================================================
+author: P Chamberlain
+date: September 2014
+
+Slide 2
+========================================================
+
+Ever wanted to guess the mean on a histogram?
+
+Well now you can!
+
+Slide 3 With Code
+========================================================
+
+Using the famous Galton data set ..
+```{r}
+library(shiny)
+library(UsingR)
+data(galton)
+summary(galton)
+```
+
+Slide 4 With Plot
+========================================================
+Here's a static histogram
+```{r, echo=FALSE}
+hist(galton$child, xlab= 'child height', col='lightblue', main='Histogram')
+      mu <- mean(galton$child)
+      lines(c(mu,mu),c(0,200),col="red",lwd=5)
+      mse <- mean((galton$child-mu)^2)
+      text(63,150,paste("mu = ",mu))
+      text(63, 140, paste("MSE = ", round(mse,2)))
+```
+
+Slide 5 
+========================================================
+How much more fun would it be with a slider?
+
+Try it here:
+https://pjchamberlain.shinyapps.io/devdataprod/ 
