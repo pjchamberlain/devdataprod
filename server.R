@@ -1,16 +1,24 @@
 library(shiny)
 library(UsingR)
-data(galton)
+data (iris)    
+library(caret)
+modFit <- train(Species ~ ., method="rpart", data=iris)
 
 shinyServer(
-  function(input, output){
-    output$newHist <- renderPlot({
-      hist(galton$child, xlab= 'child height', col='lightblue', main='Histogram')
-      mu <- input$mu
-      lines(c(mu,mu),c(0,200),col="red",lwd=5)
-      mse <- mean((galton$child-mu)^2)
-      text(63,150,paste("mu = ",mu))
-      text(63, 140, paste("MSE = ", round(mse,2)))
-    })
+  function(input, output){ 
+    
+    #get test values
+    testdata <- reactive({
+                            testdata<- data.frame(
+                                        Sepal.Length= input$SL,
+                                        Sepal.Width = input$SW,
+                                        Petal.Length=input$PL,
+                                        Petal.Width=input$PW,
+                                        Species="unknown")
+  })
+        
+    #predict
+    output$prediction <- renderPrint({predict(modFit, newdata=testdata())})
+
   }
   )
