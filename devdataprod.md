@@ -45,7 +45,7 @@ See if you can work out the relationships in the scatter plot
 
 Slide 5 
 ========================================================
-How much more fun would it be sliders for the dimensions and a button to make a prediction?
+How much more fun would it be with sliders for the dimensions and a button to make a prediction?
 
 Try it here:
 https://pjchamberlain.shinyapps.io/devdataprod/ 
