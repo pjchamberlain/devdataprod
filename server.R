@@ -1,9 +1,10 @@
 library(shiny)
 library(UsingR)
 data (iris)    
-library(caret)
-modFit <- train(Species ~ ., method="rpart", data=iris)
-
+#library(caret)
+#modFit <- train(Species ~ ., method="rpart", data=iris)
+library(rpart)
+modFit <- rpart(Species ~ ., data=iris)
 shinyServer(
   function(input, output){ 
     
