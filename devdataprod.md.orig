@@ -5,17 +5,25 @@ date: September 2014
 
 Slide 2
 ========================================================
+<<<<<<< HEAD
 title:false
   
     
       
+=======
+
+>>>>>>> 02ba0ad3d35f08076d5e18298a4827f76b39cc4e
 Ever wanted to identify an Iris species, from just it's petal and sepal dimensions?
 
 Well now you can!
 
 Slide 3
 ========================================================
+<<<<<<< HEAD
 title:false
+=======
+
+>>>>>>> 02ba0ad3d35f08076d5e18298a4827f76b39cc4e
 Using the famous Edgar Anderson's Iris Data set ..
 
 ```r
@@ -43,7 +51,7 @@ summary(iris)
 
 Slide 4
 ========================================================
-See if you can work out the relationships in the scatter plot
+<<<<<<< HEAD
 title: false
   
     
@@ -59,6 +67,13 @@ title:false
   
     
       
+=======
+See if you can work out the relationships in the scatter plot
+![plot of chunk unnamed-chunk-2](devdataprod-figure/unnamed-chunk-2.png) 
+
+Slide 5 
+========================================================
+>>>>>>> 02ba0ad3d35f08076d5e18298a4827f76b39cc4e
 How much more fun would it be with sliders for the dimensions and a button to make a prediction?
 
 Try it here:

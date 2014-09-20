@@ -1,0 +1,35 @@
+library(shiny)
+library(UsingR)
+<<<<<<< HEAD
+library(xtable)
+library(wordcloud)
+=======
+>>>>>>> 02ba0ad3d35f08076d5e18298a4827f76b39cc4e
+data (iris)    
+#library(caret)
+#modFit <- train(Species ~ ., method="rpart", data=iris)
+library(rpart)
+modFit <- rpart(Species ~ ., data=iris)
+shinyServer(
+  function(input, output){ 
+    
+    #get test values
+    testdata <- reactive({
+                            testdata<- data.frame(
+                                        Sepal.Length= input$SL,
+                                        Sepal.Width = input$SW,
+                                        Petal.Length=input$PL,
+                                        Petal.Width=input$PW,
+                                        Species="unknown")
+  })
+        
+    #predict
+<<<<<<< HEAD
+    #output$prediction <- renderPrint({predict(modFit, newdata=testdata())})
+    output$prediction <- renderPlot({ wordcloud(c('setosa', 'versicolor', 'virginica'),predict(modFit, newdata=testdata()),colors="purple")})
+=======
+    output$prediction <- renderPrint({predict(modFit, newdata=testdata())})
+>>>>>>> 02ba0ad3d35f08076d5e18298a4827f76b39cc4e
+
+  }
+  )
