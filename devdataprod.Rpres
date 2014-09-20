@@ -1,0 +1,48 @@
+Coursera Data Science Specialisation: Developing Data Products
+========================================================
+author: P Chamberlain
+date: September 2014
+
+Slide 2
+========================================================
+title:false
+  
+    
+      
+Ever wanted to identify an Iris species, from just it's petal and sepal dimensions?
+
+Well now you can!
+
+Slide 3
+========================================================
+title:false
+Using the famous Edgar Anderson's Iris Data set ..
+```{r}
+library(UsingR)
+data (iris)  
+summary(iris)
+```
+
+Slide 4
+========================================================
+title: false
+  
+    
+      
+      
+See if you can work out the relationships from these pairs scatter plots?
+
+```{r, echo=FALSE}
+pairs(iris)
+```
+
+Slide 5
+========================================================
+title:false
+  
+    
+      
+How much more fun would it be with sliders for the dimensions and a button to make a prediction?
+
+Try it here:
+https://pjchamberlain.shinyapps.io/devdataprod/ 
